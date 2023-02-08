@@ -56,7 +56,7 @@ class DBServiceImpl implements DBService {
     +            "\"label\": \"$@graph.rdfs:label\","
     +            "\"comment\": \"$@graph.rdfs:comment\","
     +            "\"subClassOf\": \"$@graph.rdfs:subClassOf.@id\","
-    +            "\"dataModelDomain\": \"$@graph.$0:dataModelDomain.@id\""
+    +            "\"dataModelDomain\": \"$@graph.$0dataModelDomain.@id\""
     +     "}}, {\"$merge\": \"summary\"}]";
 
   private static final String QUERY_SIMPLE_SEARCH =
