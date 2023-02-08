@@ -48,7 +48,7 @@ class DBServiceImpl implements DBService {
     "{\"type\": \"$1\"}";
 
   private static final String QUERY_SUMMARIZE = 
-    "[ { \"$match\": { \"_id\": \"$0:$1\" } },"
+    "[ { \"$match\": { \"_id\": \"$0$1\" } },"
     +    "{ \"$unwind\": \"$@graph\" },"
     +    "{ \"$match\": { \"@graph.rdfs:label\": \"$1\" } },"
     +    "{ \"$project\": { \"_id\": \"$@graph.rdfs:label\","
