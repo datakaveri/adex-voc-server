@@ -9,11 +9,11 @@
             "@context": {
                 "type": "@type",
                 "id": "@id",
-                "@vocab": "http://voc.iudx.org.in/",
+                "@vocab": "http://voc.adex.org.in/",
                 "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
                 "schema": "http://schema.org/",
                 "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-                "iudx": "https://iudx.org.in/voc/"
+                "adex": "https://adex.org.in/voc/"
             }
         }
     ],
@@ -31,11 +31,11 @@
                 {
                     "type": "@type",
                     "id": "@id",
-                    "@vocab": "http://voc.iudx.org.in/",
+                    "@vocab": "http://voc.adex.org.in/",
                     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
                     "schema": "http://schema.org/",
                     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-                    "iudx": "https://iudx.org.in/voc/"
+                    "adex": "https://adex.org.in/voc/"
                 }
             ],
             "required": [
@@ -45,7 +45,7 @@
                 "rdfs",
                 "schema",
                 "rdf",
-                "iudx"
+                "adex"
             ],
             "additionalProperties": true,
             "properties": {
@@ -73,7 +73,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "http://voc.iudx.org.in/"
+                        "http://voc.adex.org.in/"
                     ]
                 },
                 "rdfs": {
@@ -103,13 +103,13 @@
                         "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                     ]
                 },
-                "iudx": {
+                "adex": {
                     "type": "string",
-                    "title": "The iudx schema",
+                    "title": "The adex schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "https://iudx.org.in/voc/"
+                        "https://adex.org.in/voc/"
                     ]
                 }
             }

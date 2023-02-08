@@ -3,345 +3,345 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "iudx": "https://iudx.org.in/voc/"
+        "adex": "https://adex.org.in/voc/"
     },
     "@graph": [
         {
-            "@id": "iudx:Resource",
+            "@id": "adex:Resource",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Describes the Resource entry in the IUDX catalogue.",
+            "rdfs:comment": "Describes the Resource entry in the adex catalogue.",
             "rdfs:label": "Resource",
             "rdfs:isDefinedBy": {
-                "@id": "iudx:"
+                "@id": "adex:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:IUDXEntity"
+                "@id": "adex:adexEntity"
             },
-            "iudx:requiredProperties": [
+            "adex:requiredProperties": [
                 "tags",
                 "resourceGroup",
                 "description"
             ]
         },
         {
-            "@id": "iudx:hasResourceServer",
+            "@id": "adex:hasResourceServer",
             "@type": [
                 "rdf:Property",
-                "iudx:Relationship"
+                "adex:Relationship"
             ],
             "rdfs:comment": "urn pointing to the resourceServer entity",
             "rdfs:label": "hasResourceServer",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 },
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
                     "@id": "xsd:string",
                     "@type": "@id"
                 },
                 {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "adex:RelationshipValue"
                 }
             ]
         },
         {
-            "@id": "iudx:resourceGroup",
+            "@id": "adex:resourceGroup",
             "@type": [
-                "iudx:Relationship"
+                "adex:Relationship"
             ],
             "rdfs:comment": "IRI pointing to the resourceGroup entity associated with the resource.",
             "rdfs:label": "resourceGroup",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
+                    "@id": "adex:Text",
                     "@type": "@id"
                 },
                 {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "adex:RelationshipValue"
                 }
             ]
         },
         {
-            "@id": "iudx:geoCovers",
+            "@id": "adex:geoCovers",
             "@type": [
-                "iudx:GeoProperty"
+                "adex:GeoProperty"
             ],
             "rdfs:comment": "Represents the coverage relationship between two geometries/places.",
             "rdfs:label": "geoCovers",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Place"
+                    "@id": "adex:Place"
                 },
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 },
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 },
                 {
-                    "@id": "iudx:ResourceServer"
+                    "@id": "adex:ResourceServer"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
-                    "@id": "iudx:GeoJSONGeometry"
+                    "@id": "adex:GeoJSONGeometry"
                 },
                 {
-                    "@id": "iudx:Place"
+                    "@id": "adex:Place"
                 }
             ],
             "rdfs:isDefinedBy": {
-                "@id": "iudx:"
+                "@id": "adex:"
             }
         },
         {
-            "@id": "iudx:location",
+            "@id": "adex:location",
             "@type": [
-                "iudx:GeoProperty"
+                "adex:GeoProperty"
             ],
             "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
             "rdfs:label": "location",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 },
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 },
                 {
-                    "@id": "iudx:Provider"
+                    "@id": "adex:Provider"
                 },
                 {
-                    "@id": "iudx:ResourceServer"
+                    "@id": "adex:ResourceServer"
                 },
                 {
-                    "@id": "iudx:EnvAQM"
+                    "@id": "adex:EnvAQM"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
-                    "@id": "iudx:Place"
+                    "@id": "adex:Place"
                 },
                 {
-                    "@id": "iudx:Text"
+                    "@id": "adex:Text"
                 }
             ],
             "skos:exactMatch": {
                 "@id": "schema:location"
             },
             "rdfs:isDefinedBy": {
-                "@id": "iudx:"
+                "@id": "adex:"
             }
         },
         {
-            "@id": "iudx:geoJSON",
+            "@id": "adex:geoJSON",
             "@type": [
-                "iudx:GeoProperty"
+                "adex:GeoProperty"
             ],
             "rdfs:comment": "Geo-coordinates of a place specified in GeoJSON format.",
             "rdfs:label": "geoJSON",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Place"
+                    "@id": "adex:Place"
                 },
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 },
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
-                    "@id": "iudx:GeoJSONGeometry"
+                    "@id": "adex:GeoJSONGeometry"
                 }
             ],
             "rdfs:isDefinedBy": {
-                "@id": "iudx:"
+                "@id": "adex:"
             }
         },
         {
-            "@id": "iudx:hasDataModel",
+            "@id": "adex:hasDataModel",
             "@type": [
                 "rdf:Property",
-                "iudx:Relationship"
+                "adex:Relationship"
             ],
             "rdfs:comment": "urn pointing to the data-model entity",
             "rdfs:label": "hasDataModel",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 },
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
                     "@id": "xsd:string",
                     "@type": "@id"
                 },
                 {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "adex:RelationshipValue"
                 }
             ]
         },
         {
-            "@id": "iudx:hasProvider",
+            "@id": "adex:hasProvider",
             "@type": [
                 "rdf:Property",
-                "iudx:Relationship"
+                "adex:Relationship"
             ],
             "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item",
             "rdfs:label": "hasProvider",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 },
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
                     "@id": "xsd:string",
                     "@type": "@id"
                 },
                 {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "adex:RelationshipValue"
                 }
             ]
         },
         {
-            "@id": "iudx:hasResourceGroup",
+            "@id": "adex:hasResourceGroup",
             "@type": [
                 "rdf:Property",
-                "iudx:Relationship"
+                "adex:Relationship"
             ],
             "rdfs:comment": "urn pointing to the resourceGroup entity",
             "rdfs:label": "hasResourceGroup",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
                     "@id": "xsd:string",
                     "@type": "@id"
                 },
                 {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "adex:RelationshipValue"
                 }
             ]
         },
         {
-            "@id": "iudx:tags",
+            "@id": "adex:tags",
             "@type": [
-                "iudx:TextProperty"
+                "adex:TextProperty"
             ],
-            "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in IUDX catalogue",
+            "rdfs:comment": "Discovery tags associated with items (resource item, resource Group item, data models) in adex catalogue",
             "rdfs:label": "tags",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 },
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
+                    "@id": "adex:Text",
                     "@container": "@set"
                 }
             ]
         },
         {
-            "@id": "iudx:dataModel",
+            "@id": "adex:dataModel",
             "@type": [
-                "iudx:Relationship"
+                "adex:Relationship"
             ],
             "rdfs:comment": "IRI pointing to the data-model object for a given Resource or ResourceGroup.",
             "rdfs:label": "dataModel",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 },
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
+                    "@id": "adex:Text",
                     "@type": "@id"
                 },
                 {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "adex:RelationshipValue"
                 }
             ]
         },
         {
-            "@id": "iudx:provider",
+            "@id": "adex:provider",
             "@type": [
-                "iudx:Relationship"
+                "adex:Relationship"
             ],
             "rdfs:comment": "URN pointing to the provider entity associated with the given catalogue item",
             "rdfs:label": "provider",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 },
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
+                    "@id": "adex:Text",
                     "@type": "@id"
                 },
                 {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "adex:RelationshipValue"
                 }
             ]
         },
         {
-            "@id": "iudx:resourceServer",
+            "@id": "adex:resourceServer",
             "@type": [
-                "iudx:Relationship"
+                "adex:Relationship"
             ],
             "rdfs:comment": "IRI pointing to the ResourceServer entity for a given Resource or ResourceGroup.",
             "rdfs:label": "resourceServer",
-            "iudx:domainIncludes": [
+            "adex:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "adex:Resource"
                 },
                 {
-                    "@id": "iudx:ResourceGroup"
+                    "@id": "adex:ResourceGroup"
                 }
             ],
-            "iudx:rangeIncludes": [
+            "adex:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
+                    "@id": "adex:Text",
                     "@type": "@id"
                 },
                 {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "adex:RelationshipValue"
                 }
             ]
         }
